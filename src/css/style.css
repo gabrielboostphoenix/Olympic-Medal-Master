@@ -1,0 +1,118 @@
+/*
+----------------------------------------
+ESTRUTURAÇÃO BASE (v1)
+----------------------------------------
+***** GERAL
+***** BODY
+***** HEADER
+***** FOOTER
+***** PÁGINA INICIAL
+***** EXTRAS
+***** @media
+*/
+
+/* GERAL */
+html, body, header, main, footer, article, div, span, p, a, figure, img, small {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: sans-serif;
+    outline: none;
+}
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0px auto;
+}
+.linha {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    width: 100%;
+}
+/* BODY */
+body > header{
+    background-image: url(../img/bk-header.jpg);
+    background-repeat: no-repeat;
+    background-position: center -115px;
+}
+body > header .linha .coluna figure img {
+    width: 100%;
+    max-width: 150px;
+}
+body > header .linha .coluna h1 {
+    color: #fff;
+    margin-left: 30px;
+}
+/* MAIN */
+main {
+    padding-top: 80px;
+    background-color: #f7f7f7;
+    height: 100vh;
+}
+main article {
+    box-shadow: 0 0 14px -9px #000;
+}
+main article .linha .coluna {
+    padding: 0px 15px;
+}
+main article header {
+    padding: 20px 0px;
+}
+main article header .linha .coluna span {
+    font-size: 26px;
+    font-weight: bold;
+}
+main article header .linha .coluna-country {
+    flex-grow: 2;
+}
+main article header .linha .coluna-medalha span {
+    width: 48px;
+    height: 48px;
+    display: inline-block;
+    text-align: center;
+    line-height: 48px;
+    border-radius: 100%;
+}
+main article header .linha .coluna-medalha:nth-child(3) span {
+    background: #f7cc48;
+}
+main article header .linha .coluna-medalha:nth-child(4) span {
+    background: #d8d6d6;
+}
+main article header .linha .coluna-medalha:nth-child(5) span {
+    background: #b7955e;
+}
+main article section {
+    height: 600px;
+    overflow-y: scroll;
+}
+main article section .linha {
+    padding: 15px 0px;
+}
+main article section .linha:nth-child(2n+1) {
+    background-color: #e6e6e6;
+}
+main article section .linha .coluna span {
+    font-size: 22px;
+}
+main article section .linha .coluna-rank {
+    flex-basis: 100px;
+}
+main article section .linha .coluna-country {
+    flex-grow: 2;
+}
+main article section .linha .coluna-country span {
+    vertical-align: top;
+}
+.medal-gold, .medal-silver, .medal-bronze {
+    flex-basis: 85px;
+}
+main article section .linha .total {
+    flex-basis: 75px;
+}
+/* EXTRAS */
+abbr {
+    text-decoration: none;
+}
