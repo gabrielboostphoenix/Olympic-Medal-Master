@@ -1,0 +1,154 @@
+@charset "UTF-8";
+
+/* VARIABLES */
+:root {
+    --gold-medal-color: #F7CC48;
+    --silver-medal-color: #D8D6D6;
+    --bronze-medal-color: #B7955E;
+    --background-line-color: #E6E6E6;
+}
+
+/* GERAL */
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: sans-serif;
+    outline: none;
+}
+
+/* ELEMENT/TAG SELECTORS */
+body > header {
+    background-image: url(assets/bk-header.jpg);
+    background-repeat: no-repeat;
+    background-origin: border-box;
+    background-position: center -110px;
+    height: 15vh;
+}
+
+body > header > .container {
+    height: 100%;
+    width: min(1200px, 100%);
+    margin: auto;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+body > header > .container > .row > .column:nth-child(1) > figure > img {
+    width: 100%;
+    max-width: 150px;
+}
+
+body > header > .container > .row > .column:nth-child(2) > h1 {
+    margin-left: 30px;
+    color: #FFF;
+    font-size: 1.8rem;
+    font-weight: bolder;
+}
+
+main {
+    padding-top: 40px;
+    height: 85vh;
+    background-color: #F7F7F7;
+}
+
+main > .container {
+    height: 100%;
+    width: min(1200px, 90%);
+    margin: auto;
+}
+
+/* ELEMENT/TAG SELECTORS ABOUT THE OLYMPIC MEDAL TABLE */
+article {
+    box-shadow: 0 0 14px -9px #000;
+}
+
+article > header > .row {
+    display: grid;
+    grid-template-rows: 60px;
+    grid-template-columns: 8.33% 58.33% repeat(4, 8.33%);
+}
+
+article > header > .row > .rank-column span,
+article > section > .row > .rank-column span {
+    padding-left: 20px;
+}
+
+article > header > .row > .rank-column > span,
+article > header > .row > .country-column > span,
+article > header > .row > .gold-medal-column > span,
+article > header > .row > .silver-medal-column > span,
+article > header > .row > .bronze-medal-column > span,
+article > header > .row > .total-column > span {
+    font-weight: bolder;
+    font-size: 25px;
+}
+
+article > section > .row {
+    display: grid;
+    grid-template-columns: 8.33% 58.33% repeat(4, 8.33%);
+    grid-auto-rows: 50px;
+}
+
+article > section > .row:nth-child(2n+1) {
+    background-color: var(--background-line-color);
+}
+
+article > header > .row > .column,
+article > section > .row > .column {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+/* END OF ELEMENTS/TAG SELECTORS ABOUT THE OLYMPIC MEDAL TABLE */
+
+/* CLASS SELECTORS */
+.row {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+}
+
+/* THESE CLASS SELECTORS ARE ABOUT THE COLUMNS OF THE MEDAL TABLE */
+.gold-medal-column span {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 40px;
+    background-color: var(--gold-medal-color);
+    border-radius: 100px;
+    font-weight: bolder;
+}
+
+.silver-medal-column span {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 40px;
+    background-color: var(--silver-medal-color);
+    border-radius: 100px;
+    font-weight: bolder;
+}
+
+.bronze-medal-column span {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 40px;
+    background-color: var(--bronze-medal-color);
+    border-radius: 100px;
+    font-weight: bolder;
+}
+/* END OF COLUMN CLASS SELECTORS */
